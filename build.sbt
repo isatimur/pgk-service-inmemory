@@ -1,16 +1,15 @@
 name := "pgk-service-inmemory" // имя проекта
 
-version := "1.0"
 
-lazy val `pgk-service-inmemory` = (project in file(".")).enablePlugins(PlayJava,PlayScala)
+lazy val `pgk-service-inmemory` = (project in file(".")).enablePlugins(PlayJava,PlayScala, DockerPlugin)
 
 javacOptions ++= Seq("-Xlint:all")
 
 resolvers += "scalaz-bintray" at "https://dl.bintray.com/scalaz/releases"
 
-version := "2.6.x"
-
 scalaVersion := "2.12.6"
+
+version := "1.1"
 
 crossScalaVersions := Seq("2.11.12", "2.12.4")
 
