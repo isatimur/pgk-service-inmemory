@@ -3,6 +3,7 @@ package modules;
 import com.google.inject.name.Names;
 import mappers.ExampleMapper;
 import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
+import play.api.cache.redis.RecoveryPolicy;
 import play.db.Database;
 
 import javax.inject.Inject;
@@ -27,7 +28,7 @@ public class BatisModule extends org.mybatis.guice.MyBatisModule {
 
         // Подключение пакета с мапперами
         addMapperClasses(ExampleMapper.class.getPackage().getName());
-
+        bind(RecoveryPolicy.class).to(CustomRecoveryPolicy.class);
         // Подключение отдельного маппера
 //        addMapperClass(RateMapper.class);
 

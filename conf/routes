@@ -6,8 +6,8 @@ GET           /docs/                    controllers.Assets.at(path="/public/swag
 GET           /docs/swagger.json        controllers.ApiHelpController.getResources
 GET           /docs/*file               controllers.Assets.at(path="/public/swagger-ui",file)
 
-GET           /cache                    controllers.RedisController.get(key: String)
-POST          /cache                    controllers.RedisController.set(key: String, json: com.fasterxml.jackson.databind.JsonNode)
-DELETE        /cache                    controllers.RedisController.remove(key:String)
+GET           /caches/:key              controllers.RedisController.get(key: String)
+POST          /caches/:key              controllers.RedisController.set(key: String)
+DELETE        /caches/:key              controllers.RedisController.remove(key:String)
 
 

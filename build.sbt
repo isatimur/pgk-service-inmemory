@@ -18,7 +18,6 @@ libraryDependencies += guice // обязательно
 libraryDependencies += ws // обязательно
 libraryDependencies += javaWs // ?обязательно
 libraryDependencies += jcache  // не обязательно, для кэширования выдачи
-libraryDependencies += ehcache  // не обязательно, для кэширования выдачи
 libraryDependencies += cacheApi  // не обязательно, для кэширования выдачи
 libraryDependencies += "org.assertj" % "assertj-core" % "3.8.0" % Test  // обязательно для тестов
 libraryDependencies += "org.awaitility" % "awaitility" % "3.0.0" % Test  // обязательно для тестов
