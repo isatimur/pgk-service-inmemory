@@ -7,10 +7,17 @@ services:
     expose:
     - 9003
     environment:
-    - REDIS_URL=127.0.0.1
-    depends_on:
-    - redis
+    - REDIS_URL=10.0.75.1
+    links:
+    - redis:redis
+    networks:
+    - network-link
   redis:
     extends:
       file: redis.yml
       service: redis
+    networks:
+    - network-link
+networks:
+  network-link:
+    external: true
